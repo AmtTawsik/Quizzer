@@ -9,9 +9,9 @@ const Home = () => {
     return (
         <div>
             <div className='home-container'>
-                <h1 className='header-text lg:text-7xl md:text-4xl text-center font-bold text-fuchsia-100 overflow-hidden'>Welcome to the world’s largest quiz community.Take these quizzes at QUIZZER to test your knowledge on a variety of fun.</h1>
+                <h1 className='header-text lg:text-7xl md:text-4xl text- text-center md:font-bold text-fuchsia-100 overflow-hidden'>Welcome to the world’s largest quiz community.Take these quizzes at QUIZZER to test your knowledge on a variety of fun.</h1>
             </div>
-            <div>
+            <div className='product-container w-10/12 container mx-auto gap-10 md:grid md:mt-5'>
                 {
                     products.map(product => <Product key={product.id} product={product}></Product>)
                 }

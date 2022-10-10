@@ -7,3 +7,10 @@
 .header-text{
     padding: 20%;
 }
+.product-card{
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 10px;
+}
+.product-container{
+    grid-template-columns: 2fr 2fr;
+}
