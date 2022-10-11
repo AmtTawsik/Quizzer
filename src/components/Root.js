@@ -1,5 +1,6 @@
 import React, { createContext } from 'react';
 import { Outlet, useLoaderData } from 'react-router-dom';
+import Footer from './Footer';
 import Header from './Header';
 
 export const PeoductContext = createContext([]);
@@ -12,6 +13,7 @@ const Root = () => {
         <PeoductContext.Provider value={products}>
             <Header></Header>
             <Outlet></Outlet>
+            <Footer></Footer>
         </PeoductContext.Provider>
     );
 };
