@@ -19,3 +19,8 @@
     background-color: rgb(201, 230, 220);
     border-radius: 20px;
 }
+nav .active {
+    color: chartreuse;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}

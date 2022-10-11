@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import './style.css'
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     const [state, setState] = useState(false)
 
   // Replace javascript:void(0) path with your path
   const navigation = [
-      { title: "Home", path: "/" },
+      { title: "Topics", path: "/home" },
       { title: "Statistics", path: "/statistics" },
       { title: "Blog", path: "/blog" }
   ]
@@ -41,9 +42,9 @@ const Header = () => {
                           navigation.map((item, idx) => {
                               return (
                                 <li key={idx}>
-                                    <Link className='px-5 py-2 rounded-lg text-xl font-bold text-gray-800 bg-orange-400 hover:text-gray-50 hover:bg-orange-500' to={item.path}>
+                                    <NavLink className='px-5 py-2 rounded-lg text-xl font-bold text-gray-800 bg-orange-400 hover:text-gray-50 hover:bg-orange-500' to={item.path}>
                                         { item.title }
-                                    </Link>
+                                    </NavLink>
                                 </li>
                               )
                           })

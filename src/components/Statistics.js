@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
+import { XAxis, YAxis, Tooltip, LineChart, Line } from 'recharts';
 import { PeoductContext } from './Root';
 const Statistics = () => {
     const data = useContext(PeoductContext);
-    console.log(data)
     return (
         <div>
             <h1 className='text-center font-extrabold text-3xl text-amber-400 mb-40'>The Chart is Here!!!</h1>
