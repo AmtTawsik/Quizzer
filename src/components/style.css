@@ -15,5 +15,7 @@
     grid-template-columns: 2fr 2fr;
 }
 .quiz{
-    border: 1px solid red;
+    box-shadow: 5px 5px 10px gray;
+    background-color: rgb(201, 230, 220);
+    border-radius: 20px;
 }
