@@ -14,3 +14,6 @@
 .product-container{
     grid-template-columns: 2fr 2fr;
 }
+.quiz{
+    border: 1px solid red;
+}

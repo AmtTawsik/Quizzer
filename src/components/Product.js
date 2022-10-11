@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css'
 
 const Product = ({product}) => {
@@ -11,7 +12,8 @@ const Product = ({product}) => {
                     <h3 className='font-bold text-2xl'>{name}</h3>
                     <h3 className='font-extrabold'>Total Quiz:{total}</h3>
                 </div>
-                <button className='w-full bg-orange-400 py-2 mt-3 rounded-lg text-2xl font-bold hover:bg-orange-500'>Start Quiz!</button>
+                <Link to={`/quiz/${id}`}><button className='w-full bg-orange-400 py-2 mt-3 rounded-lg text-2xl font-bold hover:bg-orange-500'>Start Quiz!</button></Link>
+                
             </div>
         </div>
     );

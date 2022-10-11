@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Blog from '../components/Blog';
 import ErrorPage from '../components/ErrorPage';
 import Home from '../components/Home';
+import Quizs from '../components/Quizs';
 import Root from '../components/Root';
 import Statistics from '../components/Statistics';
 
@@ -18,7 +19,6 @@ const router = createBrowserRouter([{
         },
         {
             path:'/home',
-            loader:()=>fetch('https://openapi.programming-hero.com/api/quiz'),
             element:<Home></Home>,
         },
         {
@@ -28,7 +28,14 @@ const router = createBrowserRouter([{
         {
             path:'/blog',
             element:<Blog></Blog>
-        }
+        },
+        {
+            path:'/quiz/:quizId',
+            loader:async ({params}) =>{
+                return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+            },
+            element:<Quizs></Quizs>,
+        },
     ],
 }])
 
